@@ -1,0 +1,15 @@
+{
+  "name": "news-homepage",
+  "version": "1.0.0",
+  "description": "Frontend Mentor - News homepage solution",
+  "main": "index.js",
+  "scripts": {
+    "sass:dev": "sass --watch --style=expanded ./scss/main.scss ./css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
