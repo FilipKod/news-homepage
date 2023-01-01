@@ -5,11 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
+    <header class="header">
+      <a href="/" class="logo header__item">
+        <img
+          src="./assets/images/logo.svg"
+          height="28"
+          class="logo__image"
+          alt="News Logo"
+        />
+      </a>
+      <button class="toggle-menu header__item">
+        <img src="./assets/images/icon-menu.svg" alt="open menu icon" />
+      </button>
+      <nav class="nav header__item">
+        <ul class="nav__list" role="navigation">
           <li><a href="">Home</a></li>
           <li><a href="">New</a></li>
           <li><a href="">Popular</a></li>
@@ -20,55 +41,55 @@
     </header>
 
     <main>
-      <section id="">
-        <article>
-          <figure>
-            <picture>
-              <source
-                media="(min-width: 800px)"
-                srcset="./assets/images/image-web-3-desktop.jpg"
-              />
-              <img
-                src="./assets/images/image-web-3-mobile.jpg"
-                alt="The Bright
+      <article class="main-article">
+        <figure>
+          <picture>
+            <source
+              media="(min-width: 800px)"
+              srcset="./assets/images/image-web-3-desktop.jpg"
+            />
+            <img
+              src="./assets/images/image-web-3-mobile.jpg"
+              alt="The Bright
               Future of Web 3.0"
-              />
-            </picture>
-          </figure>
-          <a href="">
-            <h2>The Bright Future of Web 3.0</h2>
-          </a>
-          <p class="description">
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfilling its promise?
+            />
+          </picture>
+        </figure>
+        <a href="">
+          <h2>The Bright Future of Web 3.0</h2>
+        </a>
+        <p class="description">
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+        <a class="read-more">Read More</a>
+      </article>
+
+      <aside class="news">
+        <h3 class="news__title">New</h3>
+        <article class="news__article">
+          <h4 class="news__article__title">Hydrogen VS Electric Cars</h4>
+          <p class="news__article__description">
+            Will hydrogen-fueled cars ever catch up to EVs?
           </p>
-          <a class="read-more">Read More</a>
         </article>
-        <aside class="news">
-          <h3 class="news__title">New</h3>
-          <article class="news__article">
-            <h4 class="news__article__title">Hydrogen VS Electric Cars</h4>
-            <p class="news__article__description">
-              Will hydrogen-fueled cars ever catch up to EVs?
-            </p>
-          </article>
-          <article class="news__article">
-            <h4 class="news__article__title">The Downsides of AI Artistry</h4>
-            <p class="news__article__description">
-              What are the possible adverse effects of on-demand AI image
-              generation?
-            </p>
-          </article>
-          <article class="news__article">
-            <h4 class="news__article__title">Is VC Funding Drying Up?</h4>
-            <p class="news__article__description">
-              Private funding by VC firms is down 50% YOY. We take a look at
-              what that means.
-            </p>
-          </article>
-        </aside>
-      </section>
+        <article class="news__article">
+          <h4 class="news__article__title">The Downsides of AI Artistry</h4>
+          <p class="news__article__description">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </article>
+        <article class="news__article">
+          <h4 class="news__article__title">Is VC Funding Drying Up?</h4>
+          <p class="news__article__description">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </article>
+      </aside>
+
       <section id="top-articles">
         <article class="top-article">
           <img

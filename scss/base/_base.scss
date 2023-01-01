@@ -1,0 +1,30 @@
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  margin-top: 1.25rem;
+}

@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 52px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1;
+  }
+}

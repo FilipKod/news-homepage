@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+
+.news {
+  background-color: $dark-space-blue;
+  color: $silver;
+  padding: 2rem 1.5rem;
+
+  &__title {
+    color: $yellow;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__article {
+    border-bottom: 1px solid #5e607a;
+    padding: 1.875rem 0;
+
+    &:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &__title {
+      margin: 0 0 0.5rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      line-height: 1.2;
+      color: $almost-white;
+    }
+
+    &__description {
+      margin: 0;
+      color: $silver;
+      font-weight: 400;
+      font-size: 0.9375rem;
+      line-height: 1.73;
+    }
+  }
+}
