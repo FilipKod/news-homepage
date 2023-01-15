@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as *;
+
+.main-image {
+  margin: 0;
+  &__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.main-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+
+  &__link {
+    color: $dark-space-blue;
+  }
+
+  &__text {
+    font-weight: 800;
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+.main-text {
+  &__paragraph {
+    color: $gunmetal;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    margin: 0 0 1.5rem;
+  }
+
+  &__button {
+    background-color: $light-vermillion;
+    color: $almost-white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.27375rem;
+    padding: 0.75rem 2rem;
+    display: inline-block;
+  }
+}

@@ -1,7 +1,62 @@
+@use "../abstracts/variables" as *;
+
 .toggle-menu {
-  background: transparent;
+  $self: &;
+  position: relative;
+  outline: 0;
   border: none;
   cursor: pointer;
-  justify-content: end;
+  background-color: transparent;
   padding: 0;
+  display: flex;
+  justify-content: end;
+  z-index: 9999;
+  height: 50px;
+
+  @media screen and (min-width: $desktop-menu-width) {
+    display: none;
+  }
+
+  &__icon {
+    background: $dark-space-blue;
+    width: 40px;
+    height: 3px;
+    position: absolute;
+
+    &::before,
+    &::after {
+      content: "";
+      background: inherit;
+      width: inherit;
+      height: 3px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    #{$self}__icon {
+      height: 0;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }

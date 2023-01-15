@@ -9,7 +9,11 @@ html {
 }
 
 body {
-  padding: 1rem;
+  padding: 1rem 1rem 5rem;
+
+  &.disable-scroll {
+    overflow: hidden;
+  }
 }
 
 img {
@@ -17,14 +21,17 @@ img {
   height: auto;
 }
 
-figure {
-  margin: 0;
-}
-
 a {
   text-decoration: none;
 }
 
-main {
-  margin-top: 1.25rem;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

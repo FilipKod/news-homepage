@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as *;
+
+.homepage {
+  display: grid;
+
+  max-width: $max-width;
+  margin: 1.25rem auto 0;
+
+  @media screen and (min-width: $tablet-menu-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .main-image {
+      grid-column: 1 / span 2;
+    }
+
+    .news {
+      max-width: 500px;
+      justify-self: center;
+      grid-column: 1 / span 2;
+    }
+
+    .main-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: baseline;
+    }
+  }
+
+  @media screen and (min-width: $desktop-grid-width) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem 1.875rem;
+
+    .main-image {
+      grid-column: 1 / span 2;
+    }
+
+    .main-title {
+      grid-column: 1 / span 1;
+      margin: 0;
+    }
+
+    .main-text {
+      grid-column: 2 / span 1;
+    }
+
+    .news {
+      grid-row: 1 / span 2;
+      grid-column: 3;
+
+      margin: 0;
+    }
+
+    .top-article {
+      margin-top: 2.625rem;
+      margin-bottom: 0;
+    }
+  }
+}

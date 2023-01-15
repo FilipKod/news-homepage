@@ -1,5 +1,100 @@
+@use "../abstracts/variables" as *;
+
 .nav {
-  display: none;
+  display: block;
+  background-color: $almost-white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 70vw;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+
+  &[data-open="true"] {
+    transform: translateX(0%);
+
+    &::before {
+      opacity: 0.5 !important;
+      width: 31vw;
+    }
+  }
+
+  &::before {
+    content: "";
+    background-color: $dark-space-blue;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 0;
+    height: 100vh;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
   &__list {
+    list-style: none;
+    padding: 1.5rem;
+    margin: 9rem 0 0;
+
+    li {
+      margin-bottom: 1.5rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $dark-space-blue;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $desktop-menu-width) {
+    // reset from mobile nav
+    position: relative;
+    transform: none;
+    top: initial;
+    right: initial;
+    height: auto;
+    width: auto;
+    transition: none;
+    aspect-ratio: initial;
+    background-color: transparent;
+
+    &::before {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+
+      li {
+        margin-bottom: 0;
+
+        &:last-of-type a {
+          padding-right: 0;
+        }
+      }
+
+      a {
+        color: $gunmetal;
+        padding: 1.25rem;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: $light-vermillion;
+        }
+      }
+    }
   }
 }

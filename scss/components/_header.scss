@@ -1,8 +1,11 @@
+@use "../abstracts/variables" as *;
+
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
-  height: 52px;
+  align-items: center;
+  max-width: $max-width;
+  margin: auto;
 
   &__item {
     display: flex;
