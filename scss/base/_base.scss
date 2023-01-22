@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 * {
   box-sizing: inherit;
 }
@@ -10,6 +12,14 @@ html {
 
 body {
   padding: 1rem 1rem 5rem;
+
+  @media screen and (min-width: $tablet-grid-width) {
+    padding: 2.5rem 1rem 5rem;
+  }
+
+  @media screen and (min-width: $desktop-grid-width) {
+    padding: 5rem 1rem;
+  }
 
   &.disable-scroll {
     overflow: hidden;
