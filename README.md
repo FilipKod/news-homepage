@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desktop.png)
+![](./design/desktop.png)
 ![](./design/mobile-full.png)
 ![](./design/mobile-menu-open.png)
 
