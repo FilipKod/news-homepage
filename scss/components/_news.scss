@@ -18,6 +18,15 @@
     border-bottom: 1px solid #5e607a;
     padding: 1.875rem 0;
 
+    & > a {
+      color: $almost-white;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+
     &:last-of-type {
       border-bottom: none;
       padding-bottom: 0;
@@ -28,7 +37,7 @@
       font-weight: 800;
       font-size: 1.25rem;
       line-height: 1.2;
-      color: $almost-white;
+      color: inherit;
     }
 
     &__description {

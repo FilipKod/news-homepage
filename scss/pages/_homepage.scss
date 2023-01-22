@@ -6,7 +6,7 @@
   max-width: $max-width;
   margin: 1.25rem auto 0;
 
-  @media screen and (min-width: $tablet-menu-width) {
+  @media screen and (min-width: $tablet-grid-width) {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 
@@ -50,6 +50,10 @@
       grid-column: 3;
 
       margin: 0;
+
+      &__title {
+        font-size: 2.5rem;
+      }
     }
 
     .top-article {

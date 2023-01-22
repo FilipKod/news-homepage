@@ -17,6 +17,15 @@
       font-size: 2rem;
       line-height: 1;
     }
+
+    & > a {
+      color: $dark-space-blue;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $light-vermillion;
+      }
+    }
   }
 
   &__image {
@@ -26,7 +35,7 @@
   }
 
   &__title {
-    color: $dark-space-blue;
+    color: inherit;
     font-weight: 800;
     font-size: 1.125rem;
     line-height: 1.5rem;

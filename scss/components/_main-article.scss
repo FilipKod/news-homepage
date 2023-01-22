@@ -35,7 +35,7 @@
   }
 
   &__button {
-    background-color: $light-vermillion;
+    background: $light-vermillion;
     color: $almost-white;
     text-transform: uppercase;
     font-weight: 700;
@@ -44,5 +44,25 @@
     letter-spacing: 0.27375rem;
     padding: 0.75rem 2rem;
     display: inline-block;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+
+    &::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $dark-space-blue;
+      transform: scaleX(0);
+      transform-origin: 50% 50%;
+      transition: transform 0.3s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
   }
 }
